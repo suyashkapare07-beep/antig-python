@@ -647,7 +647,6 @@ def render_results():
 
     with col_chart:
         st.markdown("<div class='clean-card-header'>📊 Performance Breakdown</div>", unsafe_allow_html=True)
-        # Normalised scores out of 100 for visual comparison
         categories = ["CGPA", "Aptitude", "Technical", "Communication", "Projects"]
         scores = [
             round((cgpa_val / 10.0) * 100, 1),
@@ -680,7 +679,6 @@ def render_results():
     with col_sw:
         st.markdown("<div class='clean-card-header'>⚖️ Strengths & Improvement Areas</div>", unsafe_allow_html=True)
 
-        # Identify strengths & areas needing improvement based on student inputs
         strengths = []
         weaknesses = []
 
@@ -717,7 +715,6 @@ def render_results():
         elif inp.get("communication_skills", 3) <= 2:
             weaknesses.append("Communication confidence needs improvement for HR rounds.")
 
-        # Ensure balanced fallback lists
         if not strengths:
             strengths.append("Foundational starting point ready for structured career development.")
         if not weaknesses:
@@ -743,7 +740,6 @@ def render_results():
     )
 
     all_recs = recs_data.get("recommendations", [])
-    # Filter to 3-5 high-relevance items
     selected_recs = all_recs[:5] if all_recs else [
         {
             "area": "Aptitude & Reasoning",
