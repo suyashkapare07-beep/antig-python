@@ -1,0 +1,47 @@
+{
+  "model_name": "Logistic Regression",
+  "test_accuracy": 0.8667,
+  "test_f1_score": 0.9223,
+  "test_precision": 0.8636,
+  "test_recall": 0.9896,
+  "confusion_matrix": [
+    [
+      9,
+      15
+    ],
+    [
+      1,
+      95
+    ]
+  ],
+  "cv_results": {
+    "Logistic Regression": 0.9072,
+    "Decision Tree": 0.8534,
+    "Random Forest": 0.8969,
+    "Gradient Boosting": 0.8769
+  },
+  "feature_columns": [
+    "cgpa",
+    "aptitude_score",
+    "num_projects",
+    "num_internships",
+    "num_certifications",
+    "num_workshops",
+    "communication_skills",
+    "technical_skills_score",
+    "backlogs"
+  ],
+  "train_size": 480,
+  "test_size": 120,
+  "feature_coefficients": {
+    "cgpa": 0.9516,
+    "aptitude_score": 0.9035,
+    "num_projects": 0.3788,
+    "num_internships": 0.4277,
+    "num_certifications": 0.4274,
+    "num_workshops": 0.1093,
+    "communication_skills": 0.03,
+    "technical_skills_score": 0.8158,
+    "backlogs": -0.7708
+  }
+}
